@@ -1,4 +1,4 @@
-import { adder, adderCjs } from './main.js'
+import { adder, adderCjs } from '../src/adder-logic/index.js'
 
 describe('adder-esm', () => {
   it('add + add', () => {

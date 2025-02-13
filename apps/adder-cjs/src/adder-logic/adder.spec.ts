@@ -1,4 +1,4 @@
-import { adder } from './main'
+import { adder } from './adder'
 
 describe('adder-esm', () => {
   it('add + add', () => {
