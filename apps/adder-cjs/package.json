@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "type": "commonjs",
+  "files": ["dist", "package.json"],
   "main": "./dist/main.js",
   "private": true,
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
+    "build:clean": "rimraf ./dist && tsc -p tsconfig.build.json",
     "dev": "node ./dist/main.js",
     "lint": "biome check",
     "lint:fix": "biome check --write",

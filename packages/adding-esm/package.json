@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
+  "files": ["dist", "package.json"],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -12,6 +13,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
+    "build:clean": "rimraf ./dist && tsc -p tsconfig.build.json",
     "lint": "biome check",
     "lint:fix": "biome check --write",
     "lint:fix:unsafe": "biome check --write --unsafe",

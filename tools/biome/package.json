@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
+  "files": ["biome.*.jsonc", "package.json"],
   "exports": {
     "./lax": "./biome.lax.jsonc",
     "./strict": "./biome.strict.jsonc",

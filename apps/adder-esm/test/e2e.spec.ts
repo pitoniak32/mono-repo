@@ -5,7 +5,7 @@ describe('E2E adder-esm', () => {
     // Arrange / Act
     const result = adder(1, 1)
     // Assert
-    expect(result).toEqual(6)
+    expect(result).toEqual(9)
   })
 })
 

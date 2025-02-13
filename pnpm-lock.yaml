@@ -13,10 +13,10 @@ importers:
         version: 1.9.4
       '@mono/biome':
         specifier: workspace:*
-        version: link:packages/biome
+        version: link:tools/biome
       '@mono/tsconfig':
         specifier: workspace:*
-        version: link:packages/tsconfig
+        version: link:tools/tsconfig
       '@types/jest':
         specifier: ^29.5.14
         version: 29.5.14
@@ -73,9 +73,9 @@ importers:
 
   packages/adding-esm: {}
 
-  packages/biome: {}
+  tools/biome: {}
 
-  packages/tsconfig: {}
+  tools/tsconfig: {}
 
 packages:
 
