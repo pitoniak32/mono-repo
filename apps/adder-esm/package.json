@@ -18,6 +18,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"@mono/adding-esm": "workspace:*"
+		"@mono/adding-esm": "workspace:*",
+		"@mono/adding-cjs": "workspace:*"
 	}
 }

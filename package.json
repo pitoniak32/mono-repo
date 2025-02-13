@@ -17,7 +17,8 @@
     "lint:fix:all": "nx run-many --target=lint:fix",
     "lint:fix:unsafe:all": "nx run-many --target=lint:fix:unsafe",
     "test:all": "nx run-many --target=test",
-    "ncu": "pnpx npm-check-updates --timeout=100000 --interactive"
+    "ncu": "pnpx npm-check-updates --timeout=100000 --interactive",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@types/node": "^22.13.1",
+    "husky": "^9.1.7",
     "nx": "^20.4.3",
     "rimraf": "^6.0.1",
     "typescript": "^5.7.3",
