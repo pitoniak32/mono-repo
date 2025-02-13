@@ -1,5 +1,8 @@
 {
   "extends": ["@mono/tsconfig/lib-esm-build"],
+  "compilerOptions": {
+    "outDir": "dist"
+  },
   "include": ["src/**/*"],
   "exclude": ["**/*.spec.ts"]
 }
