@@ -1,24 +1,24 @@
 {
-	"name": "@mono/adder-esm",
-	"version": "1.0.0",
-	"description": "",
-	"type": "module",
-	"main": "./dist/main.js",
-	"private": true,
-	"scripts": {
-		"build": "tsc -p tsconfig.build.json",
-		"dev": "node ./dist/main.js",
-		"lint": "biome check",
-		"lint:fix": "biome check --write",
-		"lint:fix:unsafe": "biome check --write --unsafe",
-		"test": "vitest run",
-		"test:cov": "vitest run --coverage"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"dependencies": {
-		"@mono/adding-esm": "workspace:*",
-		"@mono/adding-cjs": "workspace:*"
-	}
+  "name": "@mono/adder-esm",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./dist/main.js",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "node ./dist/main.js",
+    "lint": "biome check",
+    "lint:fix": "biome check --write",
+    "lint:fix:unsafe": "biome check --write --unsafe",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mono/adding-esm": "workspace:*",
+    "@mono/adding-cjs": "workspace:*"
+  }
 }
