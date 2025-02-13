@@ -1,6 +1,6 @@
 {
-  "extends": ["./tsconfig.lib-esm.json", "./tsconfig.base-build.json"],
-  "compilerOptions": {
-    "incremental": true
-  }
+	"extends": ["./tsconfig.lib-esm.json", "./tsconfig.base-build.json"],
+	"compilerOptions": {
+		"incremental": true
+	}
 }

@@ -1,0 +1,19 @@
+{
+  "name": "@mono/biome",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    "./lax": "./biome.lax.jsonc",
+    "./strict": "./biome.strict.jsonc",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "lint": "biome check",
+    "lint:fix": "biome check --write",
+    "lint:fix:unsafe": "biome check --write --unsafe"
+  },
+  "keywords": ["TypeScript", "ESModules", "CommonJS"],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,3 +1,4 @@
 {
-  "extends": ["./tsconfig.app-cjs.json", "./tsconfig.base-build.json"]
+	/* Comments should now be fine? */
+	"extends": ["./tsconfig.app-cjs.json", "./tsconfig.base-build.json"]
 }
