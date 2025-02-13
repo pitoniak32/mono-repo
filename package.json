@@ -1,0 +1,33 @@
+{
+  "name": "mono-repo",
+  "version": "1.0.0",
+  "description": "",
+  "packageManager": "pnpm@10.3.0",
+  "private": true,
+  "scripts": {
+    "build": "nx affected:build",
+    "build:clean": "nx affected:clean:build",
+    "lint": "nx affected:lint",
+    "lint:fix": "nx affected:lint:fix",
+    "lint:fix:unsafe": "nx affected:lint:fix:unsafe",
+    "test": "nx affected:test",
+    "build:all": "nx run-many --target=build",
+    "build:clean:all": "nx run-many --target=clean:build",
+    "lint:all": "nx --color run-many --target=lint",
+    "lint:fix:all": "nx run-many --target=lint:fix",
+    "lint:fix:unsafe:all": "nx run-many --target=lint:fix:unsafe",
+    "test:all": "nx run-many --target=test",
+    "ncu": "pnpx npm-check-updates --timeout=100000 --interactive"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.13.1",
+    "nx": "^20.4.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}
