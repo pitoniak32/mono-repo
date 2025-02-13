@@ -22,13 +22,5 @@
     "lint": {
       "inputs": ["noMarkdown", "^noMarkdown"]
     }
-  },
-  "plugins": [
-    {
-      "plugin": "@nx/jest/plugin",
-      "options": {
-        "targetName": "test"
-      }
-    }
-  ]
+  }
 }

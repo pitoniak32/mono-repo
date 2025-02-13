@@ -1,8 +1,5 @@
 /** @type {import('@jest/types').Config.InitialOptions} */
-const nxPreset = require('@nx/jest/preset').default;
-
 module.exports = {
-  ...nxPreset,
   testEnvironment: 'node',
   roots: ['<rootDir>/src/', '<rootDir>/test/'],
   transform: {

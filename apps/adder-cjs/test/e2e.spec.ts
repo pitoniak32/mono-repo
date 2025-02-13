@@ -1,6 +1,6 @@
 import { adder } from '../src/adder-logic'
 
-describe('adder-esm', () => {
+describe('E2E adder-esm', () => {
   it('add + add', () => {
     // Arrange / Act
     const result = adder(1, 1)

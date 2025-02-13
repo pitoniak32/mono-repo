@@ -1,6 +1,6 @@
 import { adder, adderCjs } from '../src/adder-logic/index.js'
 
-describe('adder-esm', () => {
+describe('E2E adder-esm', () => {
   it('add + add', () => {
     // Arrange / Act
     const result = adder(1, 1)
@@ -9,7 +9,7 @@ describe('adder-esm', () => {
   })
 })
 
-describe('adder-cjs', () => {
+describe('E2E adder-cjs', () => {
   it('add + add', () => {
     // Arrange / Act
     const result = adderCjs(1, 1)
