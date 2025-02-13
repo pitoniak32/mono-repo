@@ -11,6 +11,9 @@ importers:
       '@biomejs/biome':
         specifier: ^1.9.4
         version: 1.9.4
+      '@mono/tsconfig':
+        specifier: workspace:*
+        version: link:packages/tsconfig
       '@types/node':
         specifier: ^22.13.1
         version: 22.13.1
@@ -51,6 +54,8 @@ importers:
   packages/adding-cjs: {}
 
   packages/adding-esm: {}
+
+  packages/tsconfig: {}
 
 packages:
 

@@ -1,8 +1,5 @@
 {
-  "extends": ["../../tsconfig.build.json", "../../tsconfig.cjs.json"],
-  "compilerOptions": {
-    "outDir": "dist"
-  },
+  "extends": ["@mono/tsconfig/lib-cjs-build"],
   "include": ["src/**/*"],
   "exclude": ["**/*.spec.ts"]
 }

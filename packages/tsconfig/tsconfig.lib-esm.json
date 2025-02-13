@@ -1,0 +1,9 @@
+{
+  "extends": ["./tsconfig.base-esm.json"],
+  "compilerOptions": {
+    "declaration": true,
+    "composite": true,
+    "declarationMap": true,
+    "lib": ["es2022"]
+  }
+}

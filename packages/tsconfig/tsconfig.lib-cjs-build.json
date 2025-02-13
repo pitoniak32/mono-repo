@@ -1,0 +1,6 @@
+{
+  "extends": ["./tsconfig.lib-cjs.json", "./tsconfig.base-build.json"],
+  "compilerOptions": {
+    "incremental": true
+  }
+}

@@ -1,8 +1,5 @@
 {
-  "extends": ["../../tsconfig.build.json", "../../tsconfig.esm.json"],
-  "compilerOptions": {
-    "outDir": "dist"
-  },
+  "extends": ["@mono/tsconfig/lib-esm-build"],
   "include": ["src/**/*"],
   "exclude": ["**/*.spec.ts"]
 }

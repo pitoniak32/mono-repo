@@ -1,4 +1,7 @@
 {
-  "extends": "./tsconfig.base.json",
+  "extends": "@mono/tsconfig/app-esm",
+  "compilerOptions": {
+    "types": ["node", "vitest/globals"],
+  },
   "exclude": ["node_modules"]
 }

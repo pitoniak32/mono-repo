@@ -24,6 +24,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@mono/tsconfig": "workspace:*",
     "@biomejs/biome": "^1.9.4",
     "@types/node": "^22.13.1",
     "husky": "^9.1.7",
