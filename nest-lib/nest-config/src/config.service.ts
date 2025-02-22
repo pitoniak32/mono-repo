@@ -1,8 +1,5 @@
 import { Injectable } from '@nestjs/common'
-import type {
-  MongooseModuleOptions,
-  MongooseOptionsFactory,
-} from '@nestjs/mongoose'
+import { MongooseModuleOptions, MongooseOptionsFactory } from '@nestjs/mongoose'
 
 @Injectable()
 export class ConfigService implements MongooseOptionsFactory {

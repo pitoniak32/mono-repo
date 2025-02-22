@@ -1,7 +1,8 @@
-import { AddingModule, AddingService } from '@mono/nest-adding-module'
-import { ConfigModule, ConfigService } from '@mono/nest-config'
+import { AddingModule } from '@mono/nest-adding-module'
+import { ConfigService } from '@mono/nest-config'
 import { Module } from '@nestjs/common'
 import { MongooseModule } from '@nestjs/mongoose'
+import { ConfigModule } from '../../../nest-lib/nest-config/dist/config.module'
 
 @Module({
   imports: [
@@ -12,7 +13,5 @@ import { MongooseModule } from '@nestjs/mongoose'
       useExisting: ConfigService,
     }),
   ],
-  providers: [AddingService],
-  exports: [AddingService],
 })
 export class AppModule {}

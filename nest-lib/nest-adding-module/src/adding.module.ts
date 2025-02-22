@@ -8,9 +8,7 @@ import { Adding, AddingSchema } from './schemas/adding.schema'
 @Module({
   imports: [
     ConfigModule,
-    // MongooseModule.forFeature([
-    //   {name: Adding.name, schema: AddingSchema }
-    // ]),
+    MongooseModule.forFeature([{ name: Adding.name, schema: AddingSchema }]),
   ],
   controllers: [AddingController],
   providers: [AddingService],

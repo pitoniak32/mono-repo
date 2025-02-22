@@ -1,4 +1,4 @@
 {
-  "extends": ["@mono/tsconfig/app-cjs"],
+  "extends": ["@mono/tsconfig/app-esm"],
   "include": ["**/*.ts", "test/**/*"]
 }

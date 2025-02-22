@@ -17,8 +17,8 @@
     "test:cov": "jest --coverage"
   },
   "dependencies": {
-    "@mono/nest-adding-module": "catalog:",
-    "@mono/nest-config": "catalog:",
+    "@mono/nest-adding-module": "workspace:*",
+    "@mono/nest-config": "workspace:*",
     "@nestjs/common": "catalog:",
     "@nestjs/mongoose": "catalog:",
     "@nestjs/core": "catalog:",

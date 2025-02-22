@@ -30,7 +30,7 @@
     "@nestjs/platform-express": "catalog:"
   },
   "dependencies": {
-    "@mono/nest-config": "catalog:",
+    "@mono/nest-config": "workspace:*",
     "mongoose": "catalog:"
   }
 }

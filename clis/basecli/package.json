@@ -1,0 +1,50 @@
+{
+  "name": "@mono/basecli",
+  "description": "A new CLI generated with oclif",
+  "version": "0.0.0",
+  "author": "David Pitoniak",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "bin": {
+    "basecli": "./bin/run.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "main": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "lint": "biome check",
+    "lint:fix": "biome check --write",
+    "lint:fix:unsafe": "biome check --write --unsafe",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "pnpm run lint",
+    "prepack": "oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
+  },
+  "dependencies": {
+    "@oclif/core": "^4",
+    "@oclif/plugin-help": "^6",
+    "@oclif/plugin-plugins": "^5"
+  },
+  "files": ["./bin", "./dist", "./oclif.manifest.json"],
+  "homepage": "https://github.com/clis/basecli",
+  "keywords": ["oclif"],
+  "oclif": {
+    "bin": "basecli",
+    "dirname": "basecli",
+    "commands": "./dist/commands",
+    "plugins": ["@oclif/plugin-help", "@oclif/plugin-plugins"],
+    "topicSeparator": " ",
+    "topics": {
+      "hello": {
+        "description": "Say hello to the world and others"
+      }
+    }
+  }
+}
