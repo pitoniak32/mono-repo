@@ -2,6 +2,7 @@
   "name": "@mono/nest-adding-module",
   "version": "1.0.0",
   "description": "",
+  "private": false,
   "type": "commonjs",
   "files": ["dist", "package.json"],
   "exports": {
@@ -29,10 +30,7 @@
     "@nestjs/platform-express": "catalog:"
   },
   "dependencies": {
-    "@mono/nest-config": "workspace:*",
+    "@mono/nest-config": "catalog:",
     "mongoose": "catalog:"
-  },
-  "devDependencies": {
-    "@nestjs/testing": "^11.0.10"
   }
 }

@@ -1,6 +1,14 @@
 .nx/
 .vscode/
 
+
+.verdaccio/plugins/
+.verdaccio/storage/
+!.verdaccio/config/
+!.verdaccio/scripts/
+!.verdaccio/docker-compose.verdaccio.yml
+
 **/coverage/
 **/node_modules/
 **/dist/
+pack/

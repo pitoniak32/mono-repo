@@ -1,4 +1,9 @@
 {
   "extends": ["@mono/tsconfig/app-cjs"],
-  "include": ["**/*.ts", "test/**/*"]
+  "include": [
+    "**/*.ts",
+    "test/**/*",
+    "../../nest-lib/nest-adding-module/src/adding.controller.ts",
+    "../../nest-lib/nest-adding-module/src/adding.controller.spec.ts"
+  ]
 }

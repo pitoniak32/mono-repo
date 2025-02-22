@@ -1,5 +1,5 @@
-import type { AddingService } from '@mono/nest-adding-module'
 import { Controller, Get } from '@nestjs/common'
+import type { AddingService } from './adding.service'
 
 @Controller()
 export class AddingController {

@@ -1,5 +1,6 @@
 packages:
   - "apps/*"
+  - "nest-lib/*"
   - "packages/*"
   - "tools/*"
 
@@ -9,3 +10,5 @@ catalog:
   "@nestjs/platform-express": "^11.0.10"
   "@nestjs/mongoose": "^11.0.1"
   "mongoose": "^8.10.1"
+  "@mono/nest-config": "^1.0.0"
+  "@mono/nest-adding-module": "^1.0.0"

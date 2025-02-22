@@ -17,15 +17,12 @@
     "test:cov": "jest --coverage"
   },
   "dependencies": {
-    "@mono/nest-adding-module": "workspace:*",
-    "@mono/nest-config": "workspace:*",
+    "@mono/nest-adding-module": "catalog:",
+    "@mono/nest-config": "catalog:",
     "@nestjs/common": "catalog:",
     "@nestjs/mongoose": "catalog:",
     "@nestjs/core": "catalog:",
     "@nestjs/platform-express": "catalog:",
     "mongoose": "catalog:"
-  },
-  "devDependencies": {
-    "@nestjs/testing": "^11.0.10"
   }
 }

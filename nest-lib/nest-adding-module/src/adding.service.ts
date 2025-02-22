@@ -1,10 +1,9 @@
-import type { ConfigService } from '@mono/nest-config'
 import { Injectable } from '@nestjs/common'
 
 @Injectable()
 export class AddingService {
   // constructor(private readonly configService: ConfigService, @InjectModel(Adding.name) private addingModel: Model<Adding>) {}
-  constructor(private readonly configService: ConfigService) {}
+  // constructor(private readonly configService: ConfigService) {}
 
   // async create(): Promise<Adding> {
   //   const createdAdding = new this.addingModel({ first: 1, second: 1 });
@@ -17,6 +16,6 @@ export class AddingService {
 
   add(a: number, b: number): number {
     // this.addingModel
-    return a + b + this.configService.getAddingBonus()
+    return a + b //+ this.configService.getAddingBonus()
   }
 }
