@@ -1,0 +1,4 @@
+{
+  "extends": ["@mono/tsconfig/lib-cjs"],
+  "include": ["**/*.ts", "test/**/*"]
+}

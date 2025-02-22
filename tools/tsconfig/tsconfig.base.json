@@ -12,9 +12,9 @@
 		"verbatimModuleSyntax": false,
 		"strict": true,
 		"noUncheckedIndexedAccess": true,
-		"noImplicitOverride": true,
-		"noImplicitAny": true,
-		"strictNullChecks": true,
+		"noImplicitOverride": false,
+		"noImplicitAny": false,
+		"strictNullChecks": false,
 		"strictFunctionTypes": true,
 		"strictBindCallApply": true,
 		"strictPropertyInitialization": false,
@@ -22,6 +22,6 @@
 		"alwaysStrict": true,
 		"resolveJsonModule": true,
 		"experimentalDecorators": true,
-		"emitDecoratorMetadata": false
+		"emitDecoratorMetadata": true
 	}
 }

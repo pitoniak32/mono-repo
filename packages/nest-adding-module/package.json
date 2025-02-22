@@ -1,0 +1,38 @@
+{
+  "name": "@mono/nest-adding-module",
+  "version": "1.0.0",
+  "description": "",
+  "type": "commonjs",
+  "files": ["dist", "package.json"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc -p tsconfig.build.json",
+    "build:clean": "rimraf ./dist && tsc -p tsconfig.build.json",
+    "lint": "biome check",
+    "lint:fix": "biome check --write",
+    "lint:fix:unsafe": "biome check --write --unsafe",
+    "test": "jest",
+    "test:cov": "jest --coverage"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "catalog:",
+    "@nestjs/mongoose": "catalog:",
+    "@nestjs/core": "catalog:",
+    "@nestjs/platform-express": "catalog:"
+  },
+  "dependencies": {
+    "@mono/nest-config": "workspace:*",
+    "mongoose": "catalog:"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^11.0.10"
+  }
+}

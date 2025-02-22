@@ -1,0 +1,4 @@
+{
+  "extends": ["@mono/tsconfig/app-cjs"],
+  "include": ["**/*.ts", "test/**/*"]
+}
