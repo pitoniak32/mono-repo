@@ -4,46 +4,69 @@
   "version": "0.0.0",
   "author": "David Pitoniak",
   "type": "module",
+  "packageManager": "pnpm@10.4.1",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=20.0.0"
   },
   "bin": {
     "basecli": "./bin/run.js"
   },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "main": "./dist/index.js"
-    }
+    ".": {}
   },
   "scripts": {
-    "build": "rimraf dist && tsc -p tsconfig.build.json",
+    "build": "shx rm -rf dist && tsc -d -p tsconfig.build.json",
     "lint": "biome check",
     "lint:fix": "biome check --write",
     "lint:fix:unsafe": "biome check --write --unsafe",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "pnpm run lint",
-    "prepack": "oclif manifest && oclif readme",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "prepack": "oclif manifest && oclif readme && pnpm shrinkwrap",
     "version": "oclif readme && git add README.md"
   },
   "dependencies": {
     "@oclif/core": "^4",
     "@oclif/plugin-help": "^6",
-    "@oclif/plugin-plugins": "^5"
+    "@oclif/plugin-plugins": "^5",
+    "@oclif/plugin-update": "^4.6.31"
   },
   "files": ["./bin", "./dist", "./oclif.manifest.json"],
-  "homepage": "https://github.com/clis/basecli",
-  "keywords": ["oclif"],
   "oclif": {
     "bin": "basecli",
     "dirname": "basecli",
     "commands": "./dist/commands",
-    "plugins": ["@oclif/plugin-help", "@oclif/plugin-plugins"],
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins",
+      "@oclif/plugin-update"
+    ],
     "topicSeparator": " ",
     "topics": {
       "hello": {
         "description": "Say hello to the world and others"
+      }
+    },
+    "update": {
+      "s3": {
+        "bucket": "oclif-staging",
+        "templates": {
+          "target": {
+            "unversioned": "tarballs/<%- bin %>/<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %><%- bin %>-<%- platform %>-<%- arch %><%- ext %>",
+            "versioned": "tarballs/<%- bin %>/<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %><%- bin %>-v<%- version %>/<%- bin %>-v<%- version %>-<%- platform %>-<%- arch %><%- ext %>",
+            "manifest": "tarballs/<%- bin %>/<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %><%- platform %>-<%- arch %>"
+          },
+          "vanilla": {
+            "unversioned": "tarballs/<%- bin %>/<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %><%- bin %><%- ext %>",
+            "versioned": "tarballs/<%- bin %>/<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %><%- bin %>-v<%- version %>/<%- bin %>-v<%- version %><%- ext %>",
+            "manifest": "tarballs/<%- bin %>/<%- channel === 'stable' ? '' : 'channels/' + channel + '/' %>version"
+          }
+        }
+      },
+      "node": {
+        "version": "20.18.3",
+        "targets": ["darwin-x64", "linux-x64", "win32-x64"]
       }
     }
   }
